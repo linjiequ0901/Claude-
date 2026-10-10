@@ -1,0 +1,372 @@
+<title>Upper House 十一</title>
+<meta name="description" content="2026 年国庆，在香港 The Upper House 的几张照片。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Noto+Serif+SC:wght@500;700&display=swap">
+<style>
+  /* Layout: one narrow photo column, like looking out of the room's corner window; oak "sill" under the hero,
+     olive "cushion" chips for chapter names, and one dark harbour band for the fireworks night. */
+  :root {
+    --paper: #E8E6DD;      /* greige wall */
+    --ink: #22251B;        /* olive-black */
+    --mist: #676B5E;       /* captions */
+    --rule: #CFCBBE;
+    --olive: #535B37;      /* window-seat cushions */
+    --on-olive: #EEEDE4;
+    --oak: #B98A4E;        /* window frame */
+    --night: #0F0C0B;
+    --night-fg: #EDE3D2;
+    --night-mist: #A89E8E;
+    --spark: #E3A55B;
+    --lb-bg: rgba(10, 9, 8, .96);
+
+    --f-zh: "Noto Serif SC", "Songti SC", "STSong", serif;
+    --f-en: "Italiana", "Didot", "Bodoni 72", Georgia, serif;
+    --f-body: -apple-system, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #171913; --ink: #E7E4D8; --mist: #9C9F92; --rule: #33362B;
+      --olive: #A4AE7C; --on-olive: #1A1C15; --oak: #CFA163;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #171913; --ink: #E7E4D8; --mist: #9C9F92; --rule: #33362B;
+    --olive: #A4AE7C; --on-olive: #1A1C15; --oak: #CFA163;
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font: 16px/1.8 var(--f-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin-inline: auto; padding-inline: 16px; }
+
+  .eyebrow {
+    margin: 0;
+    font-size: .72rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--mist);
+  }
+  h1, h2 { font-family: var(--f-zh); font-weight: 700; text-wrap: balance; margin: 0; }
+  .en { font-family: var(--f-en); letter-spacing: .03em; margin: 0; }
+  p { margin: 0; }
+
+  /* Hero */
+  .hero { padding-block: 40px 8px; display: grid; gap: 18px; }
+  .hero h1 { font-size: clamp(2.6rem, 12vw, 4.6rem); line-height: 1.12; letter-spacing: .02em; }
+  .hero .en { font-size: clamp(1.3rem, 5.4vw, 1.9rem); line-height: 1.3; color: var(--olive); }
+  .hero .lede { max-width: 34em; color: var(--ink); }
+  .sill { margin: 10px 0 0; }
+  .sill img { display: block; width: 100%; border-bottom: 14px solid var(--oak); }
+
+  .facts {
+    margin: 6px 0 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
+    border-top: 1px solid var(--rule);
+  }
+  .facts dt, .facts dd { margin: 0; padding-block: 10px; border-bottom: 1px solid var(--rule); }
+  .facts dt { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--mist); padding-top: 13px; }
+  .facts dd { min-width: 0; }
+
+  /* Chapters */
+  .chapter { padding-block: 56px 8px; display: grid; gap: 18px; }
+  .chapter header { display: grid; gap: 10px; justify-items: start; }
+  .cushion {
+    font-family: var(--f-en);
+    font-size: 1.02rem;
+    letter-spacing: .08em;
+    background: var(--olive);
+    color: var(--on-olive);
+    padding: .2em 1.05em .25em;
+    border-radius: 12px;
+  }
+  .chapter h2 { font-size: clamp(1.7rem, 7vw, 2.3rem); line-height: 1.25; }
+  .chapter .lede { max-width: 34em; }
+
+  figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+  figure img, .pair img {
+    display: block; width: 100%; height: auto;
+    cursor: zoom-in;
+    background: var(--rule);
+  }
+  figcaption, .cap { font-size: .86rem; line-height: 1.65; color: var(--mist); }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .pair img { aspect-ratio: 3 / 4; object-fit: cover; }
+  .quote { font-family: var(--f-en); font-size: 1.05rem; color: var(--ink); letter-spacing: .02em; }
+
+  /* Night band */
+  .night {
+    margin-top: 64px;
+    background:
+      radial-gradient(120% 60% at 50% 0%, rgba(200, 64, 46, .28), transparent 70%),
+      var(--night);
+    color: var(--night-fg);
+  }
+  .night .chapter { padding-block: 56px 56px; }
+  .night .eyebrow, .night figcaption, .night .cap { color: var(--night-mist); }
+  .night .cushion { background: var(--spark); color: var(--night); }
+  .night h2 { color: var(--night-fg); }
+  .night img { background: #1d1816; }
+
+  /* Ending */
+  .end { padding-block: 64px 72px; display: grid; gap: 14px; text-align: center; justify-items: center; }
+  .end p:first-child { font-family: var(--f-zh); font-size: clamp(1.4rem, 6vw, 1.9rem); font-weight: 500; text-wrap: balance; }
+  .end .en { color: var(--mist); font-size: 1.05rem; }
+  .end .mark {
+    width: 54px; height: 54px; border: 1px solid var(--oak); border-radius: 50%;
+    display: grid; place-items: center; font-family: var(--f-en); font-size: 1.6rem; color: var(--oak);
+  }
+
+  @media (min-width: 640px) {
+    .hero { padding-block: 72px 8px; }
+    .chapter { padding-block: 80px 8px; }
+    .pair { gap: 12px; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+  }
+
+  /* Viewer */
+  .lb {
+    position: fixed; inset: 0; z-index: 10;
+    background: var(--lb-bg);
+    display: grid; grid-template-rows: auto 1fr auto;
+    padding: calc(env(safe-area-inset-top, 0px) + 8px) 12px calc(env(safe-area-inset-bottom, 0px) + 16px);
+    color: #EDE8DD;
+    touch-action: pan-y;
+  }
+  .lb[hidden] { display: none; }
+  .lb-top { display: flex; justify-content: space-between; align-items: center; }
+  .lb-count { font-size: .8rem; letter-spacing: .14em; color: #A8A397; font-variant-numeric: tabular-nums; }
+  .lb-stage { min-height: 0; display: grid; place-items: center; }
+  .lb-stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .lb-bottom { display: grid; grid-template-columns: 44px 1fr 44px; gap: 8px; align-items: center; }
+  .lb-cap { font-size: .86rem; line-height: 1.6; color: #C9C3B6; text-align: center; min-width: 0; }
+  .lb button {
+    width: 44px; height: 44px; border: 0; border-radius: 50%;
+    background: rgba(255, 255, 255, .08); color: #EDE8DD;
+    font-size: 1.4rem; line-height: 1; cursor: pointer;
+  }
+  .lb button:hover { background: rgba(255, 255, 255, .16); }
+  :focus-visible { outline: 2px solid var(--oak); outline-offset: 3px; }
+  .lb :focus-visible { outline-color: #E3A55B; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero > * { animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; }
+    .hero > :nth-child(2) { animation-delay: .08s; }
+    .hero > :nth-child(3) { animation-delay: .16s; }
+    .hero > :nth-child(4) { animation-delay: .24s; }
+    .hero > :nth-child(5) { animation-delay: .32s; }
+    @keyframes rise { from { transform: translateY(10px); } to { transform: none; } }
+    .lb-stage img { animation: fade .25s ease both; }
+    @keyframes fade { from { opacity: .3; } to { opacity: 1; } }
+  }
+</style>
+
+<main>
+  <div class="wrap">
+    <header class="hero">
+      <p class="eyebrow">Hong Kong · 2026 国庆</p>
+      <h1>在高处，<br>过十一</h1>
+      <p class="en">A National Day at The Upper House</p>
+      <p class="lede">这个国庆，我们住在金钟的 The Upper House。房间在高层，转角是一整面窗：白天看楼、看山，晚上看维港的烟花。把这几天的照片放在这里，留个纪念。</p>
+      <figure class="sill">
+        <img src="photos/nook-portrait.jpg" width="1200" height="1600" alt="阳光照进转角窗台，橄榄绿坐垫，窗外是中环的高楼和山" data-lb>
+      </figure>
+      <dl class="facts">
+        <dt>酒店</dt><dd>The Upper House</dd>
+        <dt>地址</dt><dd>香港金钟 · 太古广场 88 Queensway</dd>
+        <dt>时间</dt><dd>2026 年 10 月 · 国庆假期</dd>
+        <dt>我们</dt><dd>Mr &amp; Mrs Qu</dd>
+      </dl>
+    </header>
+
+    <section class="chapter" id="checkin">
+      <header>
+        <span class="cushion">Check-in</span>
+        <h2>入住</h2>
+      </header>
+      <p class="lede">一进房间，桌上放着一个小礼盒和一张手写卡片。</p>
+      <figure>
+        <img src="photos/welcome.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Upper House 黑色礼盒和手写欢迎卡片" data-lb>
+        <figcaption class="quote">“Dear Mr &amp; Mrs Qu, a warm welcome to our House!”</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/room.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="房间全景：书桌、长沙发和整面转角落地窗，窗外是半山" data-lb>
+        <figcaption>原木、灰绿和米色。窗外一半是写字楼，一半是半山的绿。</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/bath.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="浴室：浴缸正对转角窗，地脚有暖色灯带" data-lb>
+        <figcaption>浴缸也正对着转角窗，地脚的灯带一直亮到窗边。</figcaption>
+      </figure>
+    </section>
+
+    <section class="chapter" id="window">
+      <header>
+        <span class="cushion">By the Window</span>
+        <h2>窗边</h2>
+      </header>
+      <p class="lede">房间里最好的位置，是这个铺着橄榄绿坐垫的转角窗台。我们在这里坐了很久。</p>
+      <figure>
+        <img src="photos/nook-wide.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="下午阳光下的转角窗台和小桌，桌上放着一本画册" data-lb>
+        <figcaption>下午的阳光照进来，小桌上放着一本《Old Hong Kong in Colour》。</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/window-wide.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="坐在转角窗台上，双手抱胸，背后是城市和山" data-lb>
+        <figcaption>坐在窗台上，背后是中环和金钟的楼群。</figcaption>
+      </figure>
+      <div class="two">
+        <figure>
+          <img src="photos/window-portrait.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="坐在窗台上转头看向窗外" data-lb>
+        </figure>
+        <figure>
+          <img src="photos/by-the-window.jpg" width="1005" height="1600" loading="lazy" decoding="async" alt="长发背影站在窗前看城市" data-lb>
+        </figure>
+      </div>
+      <p class="cap">看楼，看山，看对面写字楼里还亮着的灯。</p>
+    </section>
+
+    <section class="chapter" id="taste">
+      <header>
+        <span class="cushion">Slow Mornings</span>
+        <h2>慢慢吃</h2>
+      </header>
+      <figure>
+        <img src="photos/breakfast.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="早餐：蒸笼点心、炒面、油条，牛油果吐司配太阳蛋，水果和拿铁" data-lb>
+        <figcaption>早餐一半广式一半西式：虾饺、烧卖、叉烧包、炒面和油条；另一边是牛油果吐司配两只太阳蛋，再加一碗水果、两杯拿铁。</figcaption>
+      </figure>
+      <div class="pair">
+        <img src="photos/drinks-harbour.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="冻奶茶和莓果奶昔，背后是维港" data-lb>
+        <img src="photos/koffee.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="两杯 KOFFEE 巧克力冰饮" data-lb>
+      </div>
+      <p class="cap">左：窗边的冻奶茶和莓果奶昔，远处是维港。右：商场里的 KOFFEE，一杯盖满了可可粉。</p>
+    </section>
+
+    <section class="chapter" id="city">
+      <header>
+        <span class="cushion">City &amp; Harbour</span>
+        <h2>城与港</h2>
+      </header>
+      <div class="pair">
+        <img src="photos/rooftop.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="露台花园：绿篱、白色遮阳伞和沙发，背后是蓝天和高楼" data-lb>
+        <img src="photos/orange-boxes.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="窗台上叠着几个橙色礼盒，窗外是城市" data-lb>
+      </div>
+      <p class="cap">左：绿篱围起来的露台花园。右：窗台上叠着几个橙色盒子。</p>
+      <figure>
+        <img src="photos/harbour-golden-hour.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="傍晚的维港和尖沙咀，海面上有很多船" data-lb>
+        <figcaption>国庆傍晚，对岸尖沙咀的楼上挂着庆祝建国 77 周年的横幅，海面上的船越来越多。</figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <section class="night" id="fireworks">
+    <div class="wrap chapter">
+      <header>
+        <span class="cushion">October 1 · Victoria Harbour</span>
+        <h2>十月一日，夜</h2>
+      </header>
+      <p class="lede">国庆晚上，维港放烟花。我们没去海边挤，就在房间的窗口看。</p>
+      <figure>
+        <img src="photos/fireworks-1.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="维港上空一排金红色烟花" data-lb>
+      </figure>
+      <figure>
+        <img src="photos/fireworks-2.jpg" width="1600" height="1066" loading="lazy" decoding="async" alt="烟花落在九龙的楼群上，海面映着红光" data-lb>
+        <figcaption>金色和红色一排排在九龙上空炸开，海面被映成了红色。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <footer class="end">
+      <div class="mark" aria-hidden="true">H</div>
+      <p>下一个十一，再来高处看看。</p>
+      <p class="en">Mr &amp; Mrs Qu · The Upper House · Hong Kong · 2026.10</p>
+    </footer>
+  </div>
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="查看照片" hidden>
+  <div class="lb-top">
+    <span class="lb-count" id="lb-count"></span>
+    <button type="button" id="lb-close" aria-label="关闭">×</button>
+  </div>
+  <div class="lb-stage" id="lb-stage"><img id="lb-img" alt=""></div>
+  <div class="lb-bottom">
+    <button type="button" id="lb-prev" aria-label="上一张">‹</button>
+    <p class="lb-cap" id="lb-cap"></p>
+    <button type="button" id="lb-next" aria-label="下一张">›</button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var photos = Array.prototype.slice.call(document.querySelectorAll('img[data-lb]'));
+    var lb = document.getElementById('lb');
+    var img = document.getElementById('lb-img');
+    var cap = document.getElementById('lb-cap');
+    var count = document.getElementById('lb-count');
+    var current = 0;
+    var lastFocus = null;
+
+    function show(i) {
+      current = (i + photos.length) % photos.length;
+      var p = photos[current];
+      img.src = p.currentSrc || p.src;
+      img.alt = p.alt;
+      cap.textContent = p.alt;
+      count.textContent = (current + 1) + ' / ' + photos.length;
+    }
+    function open(i) {
+      lastFocus = document.activeElement;
+      show(i);
+      lb.hidden = false;
+      document.documentElement.style.overflow = 'hidden';
+      document.getElementById('lb-close').focus();
+    }
+    function close() {
+      lb.hidden = true;
+      document.documentElement.style.overflow = '';
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    photos.forEach(function (p, i) {
+      p.tabIndex = 0;
+      p.setAttribute('role', 'button');
+      p.addEventListener('click', function () { open(i); });
+      p.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+      });
+    });
+
+    document.getElementById('lb-close').addEventListener('click', close);
+    document.getElementById('lb-prev').addEventListener('click', function () { show(current - 1); });
+    document.getElementById('lb-next').addEventListener('click', function () { show(current + 1); });
+    document.getElementById('lb-stage').addEventListener('click', function (e) {
+      if (e.target !== img) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (lb.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') show(current - 1);
+      else if (e.key === 'ArrowRight') show(current + 1);
+    });
+
+    var startX = null, startY = null;
+    lb.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX; startY = e.touches[0].clientY;
+    }, { passive: true });
+    lb.addEventListener('touchend', function (e) {
+      if (startX === null) return;
+      var dx = e.changedTouches[0].clientX - startX;
+      var dy = e.changedTouches[0].clientY - startY;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) show(current + (dx < 0 ? 1 : -1));
+      else if (dy > 90 && Math.abs(dy) > Math.abs(dx)) close();
+      startX = null;
+    }, { passive: true });
+  })();
+</script>
