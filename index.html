@@ -1,38 +1,37 @@
-<title>Upper House 十一</title>
-<meta name="description" content="2026 年国庆，在香港 The Upper House 的几张照片。">
+<title>Upper House Anniversary</title>
+<meta name="description" content="Our wedding anniversary at The Upper House, Hong Kong, over the 2026 National Day holiday.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Noto+Serif+SC:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
 <style>
   /* Layout: one narrow photo column, like looking out of the room's corner window; oak "sill" under the hero,
      olive "cushion" chips for chapter names, and one dark harbour band for the fireworks night. */
   :root {
     --paper: #E8E6DD;      /* greige wall */
     --ink: #22251B;        /* olive-black */
-    --mist: #676B5E;       /* captions */
+    --mist: #5F6356;       /* captions */
     --rule: #CFCBBE;
     --olive: #535B37;      /* window-seat cushions */
     --on-olive: #EEEDE4;
     --oak: #B98A4E;        /* window frame */
     --night: #0F0C0B;
     --night-fg: #EDE3D2;
-    --night-mist: #A89E8E;
+    --night-mist: #B3A998;
     --spark: #E3A55B;
     --lb-bg: rgba(10, 9, 8, .96);
 
-    --f-zh: "Noto Serif SC", "Songti SC", "STSong", serif;
-    --f-en: "Italiana", "Didot", "Bodoni 72", Georgia, serif;
-    --f-body: -apple-system, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    --f-display: "Italiana", "Didot", "Bodoni 72", Georgia, serif;
+    --f-body: "Newsreader", "Iowan Old Style", "Palatino", Georgia, serif;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper: #171913; --ink: #E7E4D8; --mist: #9C9F92; --rule: #33362B;
+      --paper: #171913; --ink: #E7E4D8; --mist: #A3A698; --rule: #33362B;
       --olive: #A4AE7C; --on-olive: #1A1C15; --oak: #CFA163;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --paper: #171913; --ink: #E7E4D8; --mist: #9C9F92; --rule: #33362B;
+    --paper: #171913; --ink: #E7E4D8; --mist: #A3A698; --rule: #33362B;
     --olive: #A4AE7C; --on-olive: #1A1C15; --oak: #CFA163;
     color-scheme: dark;
   }
@@ -40,27 +39,28 @@
   body {
     background: var(--paper);
     color: var(--ink);
-    font: 16px/1.8 var(--f-body);
+    font: 400 20px/1.6 var(--f-body);
     -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
   }
   .wrap { max-width: 760px; margin-inline: auto; padding-inline: 16px; }
 
   .eyebrow {
     margin: 0;
-    font-size: .72rem;
-    letter-spacing: .22em;
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .2em;
     text-transform: uppercase;
     color: var(--mist);
   }
-  h1, h2 { font-family: var(--f-zh); font-weight: 700; text-wrap: balance; margin: 0; }
-  .en { font-family: var(--f-en); letter-spacing: .03em; margin: 0; }
+  h1, h2 { font-family: var(--f-display); font-weight: 400; text-wrap: balance; margin: 0; }
   p { margin: 0; }
 
   /* Hero */
-  .hero { padding-block: 40px 8px; display: grid; gap: 18px; }
-  .hero h1 { font-size: clamp(2.6rem, 12vw, 4.6rem); line-height: 1.12; letter-spacing: .02em; }
-  .hero .en { font-size: clamp(1.3rem, 5.4vw, 1.9rem); line-height: 1.3; color: var(--olive); }
-  .hero .lede { max-width: 34em; color: var(--ink); }
+  .hero { padding-block: 44px 8px; display: grid; gap: 20px; }
+  .hero h1 { font-size: clamp(3.4rem, 17vw, 6rem); line-height: 1; letter-spacing: .01em; }
+  .hero .sub { font-style: italic; font-size: clamp(1.4rem, 6.2vw, 1.9rem); line-height: 1.3; color: var(--olive); }
+  .hero .lede { max-width: 32em; }
   .sill { margin: 10px 0 0; }
   .sill img { display: block; width: 100%; border-bottom: 14px solid var(--oak); }
 
@@ -71,35 +71,35 @@
     column-gap: 20px;
     border-top: 1px solid var(--rule);
   }
-  .facts dt, .facts dd { margin: 0; padding-block: 10px; border-bottom: 1px solid var(--rule); }
-  .facts dt { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--mist); padding-top: 13px; }
+  .facts dt, .facts dd { margin: 0; padding-block: 12px; border-bottom: 1px solid var(--rule); }
+  .facts dt { font-size: .74rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--mist); padding-top: 17px; }
   .facts dd { min-width: 0; }
 
   /* Chapters */
-  .chapter { padding-block: 56px 8px; display: grid; gap: 18px; }
-  .chapter header { display: grid; gap: 10px; justify-items: start; }
+  .chapter { padding-block: 60px 8px; display: grid; gap: 20px; }
+  .chapter header { display: grid; gap: 12px; justify-items: start; }
   .cushion {
-    font-family: var(--f-en);
-    font-size: 1.02rem;
+    font-family: var(--f-display);
+    font-size: 1.1rem;
     letter-spacing: .08em;
     background: var(--olive);
     color: var(--on-olive);
     padding: .2em 1.05em .25em;
     border-radius: 12px;
   }
-  .chapter h2 { font-size: clamp(1.7rem, 7vw, 2.3rem); line-height: 1.25; }
-  .chapter .lede { max-width: 34em; }
+  .chapter h2 { font-size: clamp(2.5rem, 12vw, 3.6rem); line-height: 1.08; }
+  .chapter .lede { max-width: 32em; }
 
-  figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+  figure { margin: 0; display: grid; gap: 10px; min-width: 0; }
   figure img, .pair img {
     display: block; width: 100%; height: auto;
     cursor: zoom-in;
     background: var(--rule);
   }
-  figcaption, .cap { font-size: .86rem; line-height: 1.65; color: var(--mist); }
+  figcaption, .cap { font-size: 1.02rem; line-height: 1.55; color: var(--mist); }
   .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .pair img { aspect-ratio: 3 / 4; object-fit: cover; }
-  .quote { font-family: var(--f-en); font-size: 1.05rem; color: var(--ink); letter-spacing: .02em; }
+  .quote { font-style: italic; font-size: 1.2rem; line-height: 1.5; color: var(--ink); }
 
   /* Night band */
   .night {
@@ -109,24 +109,27 @@
       var(--night);
     color: var(--night-fg);
   }
-  .night .chapter { padding-block: 56px 56px; }
+  .night .chapter { padding-block: 60px 60px; }
   .night .eyebrow, .night figcaption, .night .cap { color: var(--night-mist); }
   .night .cushion { background: var(--spark); color: var(--night); }
   .night h2 { color: var(--night-fg); }
   .night img { background: #1d1816; }
 
   /* Ending */
-  .end { padding-block: 64px 72px; display: grid; gap: 14px; text-align: center; justify-items: center; }
-  .end p:first-child { font-family: var(--f-zh); font-size: clamp(1.4rem, 6vw, 1.9rem); font-weight: 500; text-wrap: balance; }
-  .end .en { color: var(--mist); font-size: 1.05rem; }
-  .end .mark {
-    width: 54px; height: 54px; border: 1px solid var(--oak); border-radius: 50%;
-    display: grid; place-items: center; font-family: var(--f-en); font-size: 1.6rem; color: var(--oak);
+  .end { padding-block: 68px 76px; display: grid; gap: 16px; text-align: center; justify-items: center; }
+  .end .toast { font-family: var(--f-display); font-size: clamp(2.2rem, 10.5vw, 3.2rem); line-height: 1.12; text-wrap: balance; }
+  .end .sign { color: var(--mist); font-size: 1.02rem; }
+  .rings { position: relative; width: 74px; height: 46px; }
+  .rings span {
+    position: absolute; top: 0; width: 46px; height: 46px;
+    border: 2px solid var(--oak); border-radius: 50%;
   }
+  .rings span:first-child { left: 0; }
+  .rings span:last-child { right: 0; }
 
   @media (min-width: 640px) {
-    .hero { padding-block: 72px 8px; }
-    .chapter { padding-block: 80px 8px; }
+    .hero { padding-block: 76px 8px; }
+    .chapter { padding-block: 84px 8px; }
     .pair { gap: 12px; }
     .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
   }
@@ -142,11 +145,11 @@
   }
   .lb[hidden] { display: none; }
   .lb-top { display: flex; justify-content: space-between; align-items: center; }
-  .lb-count { font-size: .8rem; letter-spacing: .14em; color: #A8A397; font-variant-numeric: tabular-nums; }
+  .lb-count { font-size: .9rem; letter-spacing: .14em; color: #B0AB9F; font-variant-numeric: tabular-nums; }
   .lb-stage { min-height: 0; display: grid; place-items: center; }
   .lb-stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
   .lb-bottom { display: grid; grid-template-columns: 44px 1fr 44px; gap: 8px; align-items: center; }
-  .lb-cap { font-size: .86rem; line-height: 1.6; color: #C9C3B6; text-align: center; min-width: 0; }
+  .lb-cap { font-size: 1rem; line-height: 1.5; color: #D2CCBF; text-align: center; min-width: 0; }
   .lb button {
     width: 44px; height: 44px; border: 0; border-radius: 50%;
     background: rgba(255, 255, 255, .08); color: #EDE8DD;
@@ -171,95 +174,96 @@
 <main>
   <div class="wrap">
     <header class="hero">
-      <p class="eyebrow">Hong Kong · 2026 国庆</p>
-      <h1>在高处，<br>过十一</h1>
-      <p class="en">A National Day at The Upper House</p>
-      <p class="lede">这个国庆，我们住在金钟的 The Upper House。房间在高层，转角是一整面窗：白天看楼、看山，晚上看维港的烟花。把这几天的照片放在这里，留个纪念。</p>
+      <p class="eyebrow">Hong Kong · October 2026</p>
+      <h1>Happy Anniversary</h1>
+      <p class="sub">Our wedding anniversary at The Upper House</p>
+      <p class="lede">We spent this National Day holiday celebrating our wedding anniversary at The Upper House in Admiralty. Our room was high up, with a corner window that looked out on towers and hills by day and fireworks over Victoria Harbour by night. These are the photos we want to keep.</p>
       <figure class="sill">
-        <img src="photos/nook-portrait.jpg" width="1200" height="1600" alt="阳光照进转角窗台，橄榄绿坐垫，窗外是中环的高楼和山" data-lb>
+        <img src="photos/nook-portrait.jpg" width="1200" height="1600" alt="Sunlight on the corner window seat with olive-green cushions, Central's towers outside" data-lb>
       </figure>
       <dl class="facts">
-        <dt>酒店</dt><dd>The Upper House</dd>
-        <dt>地址</dt><dd>香港金钟 · 太古广场 88 Queensway</dd>
-        <dt>时间</dt><dd>2026 年 10 月 · 国庆假期</dd>
-        <dt>我们</dt><dd>Mr &amp; Mrs Qu</dd>
+        <dt>Occasion</dt><dd>Our wedding anniversary</dd>
+        <dt>Hotel</dt><dd>The Upper House</dd>
+        <dt>Address</dt><dd>Pacific Place, 88 Queensway, Admiralty</dd>
+        <dt>When</dt><dd>October 2026, National Day holiday</dd>
+        <dt>Us</dt><dd>Mr &amp; Mrs Qu</dd>
       </dl>
     </header>
 
     <section class="chapter" id="checkin">
       <header>
-        <span class="cushion">Check-in</span>
-        <h2>入住</h2>
+        <span class="cushion">Chapter one</span>
+        <h2>Check-in</h2>
       </header>
-      <p class="lede">一进房间，桌上放着一个小礼盒和一张手写卡片。</p>
+      <p class="lede">When we walked in, a small gift box and a handwritten card were waiting on the desk.</p>
       <figure>
-        <img src="photos/welcome.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Upper House 黑色礼盒和手写欢迎卡片" data-lb>
-        <figcaption class="quote">“Dear Mr &amp; Mrs Qu, a warm welcome to our House!”</figcaption>
+        <img src="photos/welcome.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="An Upper House gift box and a handwritten welcome card for Mr &amp; Mrs Qu" data-lb>
+        <figcaption class="quote">“Dear Mr &amp; Mrs Qu, a warm welcome to our House! Thank you so much for celebrating…”</figcaption>
       </figure>
       <figure>
-        <img src="photos/room.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="房间全景：书桌、长沙发和整面转角落地窗，窗外是半山" data-lb>
-        <figcaption>原木、灰绿和米色。窗外一半是写字楼，一半是半山的绿。</figcaption>
+        <img src="photos/room.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="The room: desk, long sofa and a wall of corner windows facing the hills" data-lb>
+        <figcaption>Oak, olive and stone. Half the window is office towers, half is the green of the Mid-Levels.</figcaption>
       </figure>
       <figure>
-        <img src="photos/bath.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="浴室：浴缸正对转角窗，地脚有暖色灯带" data-lb>
-        <figcaption>浴缸也正对着转角窗，地脚的灯带一直亮到窗边。</figcaption>
+        <img src="photos/bath.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="The bathtub facing the corner window, warm light along the floor" data-lb>
+        <figcaption>Even the bathtub faces the corner window, with a strip of warm light running along the floor.</figcaption>
       </figure>
     </section>
 
     <section class="chapter" id="window">
       <header>
-        <span class="cushion">By the Window</span>
-        <h2>窗边</h2>
+        <span class="cushion">Chapter two</span>
+        <h2>By the Window</h2>
       </header>
-      <p class="lede">房间里最好的位置，是这个铺着橄榄绿坐垫的转角窗台。我们在这里坐了很久。</p>
+      <p class="lede">The best seat in the room was this corner ledge with its olive-green cushions. We spent a lot of time here.</p>
       <figure>
-        <img src="photos/nook-wide.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="下午阳光下的转角窗台和小桌，桌上放着一本画册" data-lb>
-        <figcaption>下午的阳光照进来，小桌上放着一本《Old Hong Kong in Colour》。</figcaption>
+        <img src="photos/nook-wide.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="The window seat and side table in afternoon sun, a photo book on the table" data-lb>
+        <figcaption>Afternoon sun, and a copy of <i>Old Hong Kong in Colour</i> on the side table.</figcaption>
       </figure>
       <figure>
-        <img src="photos/window-wide.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="坐在转角窗台上，双手抱胸，背后是城市和山" data-lb>
-        <figcaption>坐在窗台上，背后是中环和金钟的楼群。</figcaption>
+        <img src="photos/window-wide.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Sitting on the window ledge, arms crossed, the city and hills behind" data-lb>
+        <figcaption>Sitting on the ledge, with Central and Admiralty behind.</figcaption>
       </figure>
       <div class="two">
         <figure>
-          <img src="photos/window-portrait.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="坐在窗台上转头看向窗外" data-lb>
+          <img src="photos/window-portrait.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Sitting on the window ledge, looking out over the city" data-lb>
         </figure>
         <figure>
-          <img src="photos/by-the-window.jpg" width="1005" height="1600" loading="lazy" decoding="async" alt="长发背影站在窗前看城市" data-lb>
+          <img src="photos/by-the-window.jpg" width="1005" height="1600" loading="lazy" decoding="async" alt="Standing at the window, long dark hair, looking out at the city" data-lb>
         </figure>
       </div>
-      <p class="cap">看楼，看山，看对面写字楼里还亮着的灯。</p>
+      <p class="cap">Watching the towers, the hills, and the lights still on in the offices across the street.</p>
     </section>
 
     <section class="chapter" id="taste">
       <header>
-        <span class="cushion">Slow Mornings</span>
-        <h2>慢慢吃</h2>
+        <span class="cushion">Chapter three</span>
+        <h2>Slow Mornings</h2>
       </header>
       <figure>
-        <img src="photos/breakfast.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="早餐：蒸笼点心、炒面、油条，牛油果吐司配太阳蛋，水果和拿铁" data-lb>
-        <figcaption>早餐一半广式一半西式：虾饺、烧卖、叉烧包、炒面和油条；另一边是牛油果吐司配两只太阳蛋，再加一碗水果、两杯拿铁。</figcaption>
+        <img src="photos/breakfast.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Breakfast: dim sum in a bamboo steamer, noodles, youtiao, avocado toast with eggs, fruit and lattes" data-lb>
+        <figcaption>Breakfast was half Cantonese, half Western: har gow, siu mai, char siu bao, fried noodles and youtiao on one side; avocado toast with two sunny-side-up eggs on the other, plus fruit and two lattes.</figcaption>
       </figure>
       <div class="pair">
-        <img src="photos/drinks-harbour.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="冻奶茶和莓果奶昔，背后是维港" data-lb>
-        <img src="photos/koffee.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="两杯 KOFFEE 巧克力冰饮" data-lb>
+        <img src="photos/drinks-harbour.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Iced milk tea and a berry smoothie, Victoria Harbour behind" data-lb>
+        <img src="photos/koffee.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Two KOFFEE iced chocolate drinks" data-lb>
       </div>
-      <p class="cap">左：窗边的冻奶茶和莓果奶昔，远处是维港。右：商场里的 KOFFEE，一杯盖满了可可粉。</p>
+      <p class="cap">Left: iced milk tea and a berry smoothie by the window, with the harbour in the distance. Right: iced chocolate from KOFFEE in the mall, one buried in cocoa powder.</p>
     </section>
 
     <section class="chapter" id="city">
       <header>
-        <span class="cushion">City &amp; Harbour</span>
-        <h2>城与港</h2>
+        <span class="cushion">Chapter four</span>
+        <h2>City &amp; Harbour</h2>
       </header>
       <div class="pair">
-        <img src="photos/rooftop.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="露台花园：绿篱、白色遮阳伞和沙发，背后是蓝天和高楼" data-lb>
-        <img src="photos/orange-boxes.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="窗台上叠着几个橙色礼盒，窗外是城市" data-lb>
+        <img src="photos/rooftop.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="A rooftop garden with hedges, white umbrellas and sofas under a blue sky" data-lb>
+        <img src="photos/orange-boxes.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="A stack of orange gift boxes on the window ledge" data-lb>
       </div>
-      <p class="cap">左：绿篱围起来的露台花园。右：窗台上叠着几个橙色盒子。</p>
+      <p class="cap">Left: a rooftop garden of hedges and white umbrellas. Right: a stack of orange boxes on the window ledge.</p>
       <figure>
-        <img src="photos/harbour-golden-hour.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="傍晚的维港和尖沙咀，海面上有很多船" data-lb>
-        <figcaption>国庆傍晚，对岸尖沙咀的楼上挂着庆祝建国 77 周年的横幅，海面上的船越来越多。</figcaption>
+        <img src="photos/harbour-golden-hour.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Victoria Harbour and Tsim Sha Tsui at golden hour, full of boats" data-lb>
+        <figcaption>National Day evening. Across the water in Tsim Sha Tsui, a banner marks the 77th anniversary, and more and more boats gather on the harbour.</figcaption>
       </figure>
     </section>
   </div>
@@ -268,38 +272,38 @@
     <div class="wrap chapter">
       <header>
         <span class="cushion">October 1 · Victoria Harbour</span>
-        <h2>十月一日，夜</h2>
+        <h2>Fireworks Night</h2>
       </header>
-      <p class="lede">国庆晚上，维港放烟花。我们没去海边挤，就在房间的窗口看。</p>
+      <p class="lede">On National Day night, fireworks lit up Victoria Harbour. We skipped the crowds on the waterfront and watched from our window.</p>
       <figure>
-        <img src="photos/fireworks-1.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="维港上空一排金红色烟花" data-lb>
+        <img src="photos/fireworks-1.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="A row of gold and red fireworks over Victoria Harbour" data-lb>
       </figure>
       <figure>
-        <img src="photos/fireworks-2.jpg" width="1600" height="1066" loading="lazy" decoding="async" alt="烟花落在九龙的楼群上，海面映着红光" data-lb>
-        <figcaption>金色和红色一排排在九龙上空炸开，海面被映成了红色。</figcaption>
+        <img src="photos/fireworks-2.jpg" width="1600" height="1066" loading="lazy" decoding="async" alt="Fireworks falling over Kowloon, the harbour glowing red" data-lb>
+        <figcaption>Gold and red bursts over Kowloon, and the harbour turned red beneath them.</figcaption>
       </figure>
     </div>
   </section>
 
   <div class="wrap">
     <footer class="end">
-      <div class="mark" aria-hidden="true">H</div>
-      <p>下一个十一，再来高处看看。</p>
-      <p class="en">Mr &amp; Mrs Qu · The Upper House · Hong Kong · 2026.10</p>
+      <div class="rings" aria-hidden="true"><span></span><span></span></div>
+      <p class="toast">Here’s to many more anniversaries.</p>
+      <p class="sign">Mr &amp; Mrs Qu · The Upper House · Hong Kong · October 2026</p>
     </footer>
   </div>
 </main>
 
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="查看照片" hidden>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
   <div class="lb-top">
     <span class="lb-count" id="lb-count"></span>
-    <button type="button" id="lb-close" aria-label="关闭">×</button>
+    <button type="button" id="lb-close" aria-label="Close">×</button>
   </div>
   <div class="lb-stage" id="lb-stage"><img id="lb-img" alt=""></div>
   <div class="lb-bottom">
-    <button type="button" id="lb-prev" aria-label="上一张">‹</button>
+    <button type="button" id="lb-prev" aria-label="Previous photo">‹</button>
     <p class="lb-cap" id="lb-cap"></p>
-    <button type="button" id="lb-next" aria-label="下一张">›</button>
+    <button type="button" id="lb-next" aria-label="Next photo">›</button>
   </div>
 </div>
 
